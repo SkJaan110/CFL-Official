@@ -4,257 +4,69 @@
   <meta charset="UTF-8">
   <title>Children Fantasy League</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #0f172a, #1e3a8a, #7c3aed, #be185d);
-      background-size: 400% 400%;
-      animation: gradientBG 15s ease infinite;
-      color: #fff;
-      text-align: center;
-    }
-    @keyframes gradientBG {
-      0% {background-position: 0% 50%;}
-      50% {background-position: 100% 50%;}
-      100% {background-position: 0% 50%;}
-    }
-    header {
-      padding: 20px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
-      background: rgba(255,255,255,0.1);
-      backdrop-filter: blur(5px);
-    }
-    header h1 {
-      margin: 10px 0 0;
-      font-size: 28px;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
-    }
-    .welcome {
-      margin: 20px auto;
-      max-width: 700px;
-      font-size: 18px;
-      padding: 10px;
-    }
-    .teams {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      margin: 30px auto;
-      max-width: 1200px;
-    }
-    .team {
-      background: rgba(255,255,255,0.1);
-      backdrop-filter: blur(6px);
-      border-radius: 15px;
-      width: 250px;
-      padding: 20px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.6);
-      transition: transform 0.3s;
-    }
-    .team:hover {transform: translateY(-10px) rotateX(5deg) rotateY(-5deg);}
-    .team img {
-      width: 100px;
-      height: 100px;
-      object-fit: contain;
-      margin-bottom: 10px;
-    }
-    .team h3 {
-      margin: 10px 0;
-      font-size: 20px;
-    }
-    .btn {
-      padding: 8px 16px;
-      background: linear-gradient(90deg, #f59e0b, #ef4444);
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-    .btn:hover {opacity: 0.8;}
-    .squad-page {
-      display: none;
-      max-width: 800px;
-      margin: 30px auto;
-      padding: 20px;
-      background: rgba(255,255,255,0.1);
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-    }
-    .squad-page h2 {margin-bottom: 20px;}
-    .staff {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .staff div {
-      background: rgba(255,255,255,0.15);
-      padding: 15px;
-      border-radius: 10px;
-      flex: 1;
-      min-width: 150px;
-    }
-    .extra {
-      margin: 40px auto;
-      max-width: 700px;
-      text-align: left;
-      background: rgba(0,0,0,0.3);
-      padding: 20px;
-      border-radius: 10px;
-    }
-    footer {
-      margin-top: 40px;
-      padding: 20px;
-      font-size: 14px;
-      background: rgba(255,255,255,0.05);
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <img src="cfl-logo.png" alt="CFL Logo" width="100">
+    <img src="images/cfl-logo.png" alt="CFL Logo" width="100">
     <h1>Children Fantasy League</h1>
   </header>
 
   <div class="welcome">
-    <h1>🏆CFL SESSION 6🏏</h1>
-    <p>*```Coming Soon``` </p>
+    <h1>🏆 CFL SESSION 6 🏏</h1>
+    <p><i>Coming Soon...</i></p>
   </div>
+
   <div class="cflowners">
     <h1>CFL OWNERS</h1>
     <p>▪️Sikander Ali ⭐ Shehzad Ali ⭐ Hasan Raza▪️</p>
   </div>
 
-  <div id="homePage">
-    <div class="teams">
-      <div class="team">
-        <img src="t1.png" alt="Team 1 Logo">
-        <h3>Rising Stars</h3>
-        <button class="btn" onclick="openSquad('t1')">View Squad</button>
-      </div>
-      <div class="team">
-        <img src="t2.png" alt="Team 2 Logo">
-        <h3>Balouch Raiders</h3>
-        <button class="btn" onclick="openSquad('t2')">View Squad</button>
-      </div>
-      <div class="team">
-        <img src="t3.png" alt="Team 3 Logo">
-        <h3>Flying Eagles</h3>
-        <button class="btn" onclick="openSquad('t3')">View Squad</button>
-      </div>
-      <div class="team">
-        <img src="t4.png" alt="Team 4 Logo">
-        <h3>Haideri Legends</h3>
-        <button class="btn" onclick="openSquad('t4')">View Squad</button>
-      </div>
-      <div class="team">
-        <img src="t5.png" alt="Team 5 Logo">
-        <h3>Super Kings</h3>
-        <button class="btn" onclick="openSquad('t5')">View Squad</button>
-      </div>
-      <div class="team">
-        <img src="t6.png" alt="Team 6 Logo">
-        <h3>Sultan Tigers</h3>
-        <button class="btn" onclick="openSquad('t6')">View Squad</button>
-      </div>
+  <section class="teams">
+    <div class="team">
+      <img src="images/t1.png" alt="Rising Stars">
+      <h3>Rising Stars</h3>
+      <a href="team1.html"><button class="btn">View Squad</button></a>
     </div>
-  </div>
-
-  <!-- Squad Pages -->
-  <div id="squadPage" class="squad-page">
-    <h2 id="squadTitle"></h2>
-    <div class="staff">
-      <div><strong>Owner:</stron>g> <span id="ownerName">Owner Name</span></div>
-      <div><strong>Head Coach:</strong> <span id="coachName">Head Coach Name</span></div>
-      <div><strong>Players:</strong> <span id="playersList">Not announced yet</span></div>
+    <div class="team">
+      <img src="images/t2.png" alt="Balouch Raiders">
+      <h3>Balouch Raiders</h3>
+      <a href="team2.html"><button class="btn">View Squad</button></a>
     </div>
-    <br>
-    <button class="btn" onclick="goBack()">Back to Teams</button>
-  </div>
+    <div class="team">
+      <img src="images/t3.png" alt="Flying Eagles">
+      <h3>Flying Eagles</h3>
+      <a href="team3.html"><button class="btn">View Squad</button></a>
+    </div>
+    <div class="team">
+      <img src="images/t4.png" alt="Haideri Legends">
+      <h3>Haideri Legends</h3>
+      <a href="team4.html"><button class="btn">View Squad</button></a>
+    </div>
+    <div class="team">
+      <img src="images/t5.png" alt="Super Kings">
+      <h3>Super Kings</h3>
+      <a href="team5.html"><button class="btn">View Squad</button></a>
+    </div>
+    <div class="team">
+      <img src="images/t6.png" alt="Sultan Tigers">
+      <h3>Sultan Tigers</h3>
+      <a href="team6.html"><button class="btn">View Squad</button></a>
+    </div>
+  </section>
 
   <div class="extra">
     <h3>Announcements</h3>
-    <p id="announcement">CFL-6 All Players divided in 4 Categories</p>
+    <p>CFL-6 All Players divided in 4 Categories</p>
+  </div>
 
-    <h3>Diamond Category Players</h3>
-    <p>•MD. Khan_____________________All_Rounder</p>
-    <p>•Kumail ______________________All Rounder</p>
-    <p>•Muntazir ____________________All Rounder</p>
-    <p>•Muhsan __________________Bat/All Rounder</p>
-    <p>•Zeshan _________________Bowl/All Rounder</p>
-    <p>•Fayaz __________________Bowl/All Rounder</p>
-    
-    <h3>Platinum Category Players</h3>
-    <p>•Nabi Bux_________________________Bowler</p>
-    <p>•Najaf____________________________Bowler</p>
-    <p>•AB Sadora_______________Bat/All Rounder</p>
-    <p>•Mureed__________________________Batsmam</p>
-    <p>•Rehan___________________Bat/All Rounder</p>
-    <p>•Asif Ali________________Bat All Rounder</p>
-
-    <h3>Guest Players For Platinum Category</h3>
-    <p>•Mudasir________________________Batsman</p>
-    <p>•Foto_______________________All Rounder</p>
-    <p>•Hasnain ________________________Bowler</p>
-    <p>•Aasim __________________________Bowler</p>
-    <p>•Ali Zain ______________________Batsman</p>
-    <p>•Subhan ____________________All Rounder</p>
-
-    <h3>Gold Category Players</h3>
-    <p>•Nana Sajjad ______________All Rounder</p>
-    <p>•Muzamil ______________________Batsman</p>
-    <p>•Kazim _________________________Bowler</p>
-    <p>•Mesam ________________________Batsman</p>
-    <p>•Zamin ________________________Batsman</p>
-    <p>•Zakir Hussain ____________All Rounder</p>
-
-    <h3>Silver Category Players</h3>
-    <p>•Saqib _____________________Youngster</p>
-    <p>•Aqib Ali___________________Youngster</p>
-    <p>•Asad Ali___________________Youngster</p>
-    <p>•Farhan ____________________Youngster</p>
-    <p>•Safeer ____________________Youngster</p>
-    <p>•Gulam Hussain _____________Youngster</p>
-
-    <h3>Silver 2 Category Players</h3>
-    <p>•Mevo khan________________Youngster_</p>
-    <p>•Faizan __________________Youngster_</p>
-    <p>•Sarfaraz ________________Youngster_</p>
-    <p>•Hasnain _________________Youngster_</p>
-    <p>•Saqlain _________________Youngster_</p>
-    <p>•Sakhawat ________________Youngster_</p>
-</div>
-  
   <div class="extra">
     <h3>News</h3>
-    <p id="news">No news yet.</p>
+    <p>No news yet.</p>
   </div>
 
   <footer>
     © 2025 Children Fantasy League. All Rights Reserved.
   </footer>
-
-  <script>
-    function openSquad(teamId) {
-      document.getElementById('homePage').style.display = 'none';
-      document.getElementById('squadPage').style.display = 'block';
-      let teamName = '';
-      if(teamId==='t1') teamName='Rising Stars';
-      if(teamId==='t2') teamName='Balouch Raiders';
-      if(teamId==='t3') teamName='Flying Eagles';
-      if(teamId==='t4') teamName='Haidari Legends';
-      if(teamId==='t5') teamName='Super Kings';
-      if(teamId==='t6') teamName='Sultan Tigers';
-      document.getElementById('squadTitle').innerText = teamName + " - Staff & Squad";
-    }
-    function goBack() {
-      document.getElementById('homePage').style.display = 'block';
-      document.getElementById('squadPage').style.display = 'none';
-    }
-  </script>
 </body>
 </html>
