@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e3a8a, #7c3aed, #be185d);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  color: #fff;
+  text-align: center;
+}
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+header {
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(5px);
+}
+header h1 {
+  margin: 10px 0 0;
+  font-size: 28px;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+
+.welcome, .cflowners, .extra {
+  margin: 20px auto;
+  max-width: 700px;
+  font-size: 18px;
+  padding: 10px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+}
+
+.teams {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 30px auto;
+  max-width: 1200px;
+}
+.team {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(6px);
+  border-radius: 15px;
+  width: 250px;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+  transition: transform 0.3s;
+}
+.team:hover {transform: translateY(-10px) rotateX(5deg) rotateY(-5deg);}
+.team img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+.team h3 {margin: 10px 0; font-size: 20px;}
+.btn {
+  padding: 8px 16px;
+  background: linear-gradient(90deg, #f59e0b, #ef4444);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.btn:hover {opacity: 0.8;}
+
+.players {
+  max-width: 800px;
+  margin: 30px auto;
+}
+.player-card {
+  display: flex;
+  align-items: center;
+  background: rgba(255,255,255,0.1);
+  padding: 15px;
+  margin: 15px 0;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+.player-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  margin-right: 20px;
+  object-fit: cover;
+}
+.player-info p {margin: 5px 0;}
