@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CFL-6 Matches Schedule</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e3a8a, #7c3aed, #be185d);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #fff;
+      text-align: center;
+      min-height: 100vh;
+      padding-bottom: 50px;
+    }
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+    header {
+      padding: 20px;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(5px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+    }
+    header img {
+      width: 90px;
+    }
+    header h1 {
+      margin: 10px 0 0;
+      font-size: 28px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    }
+    .schedule {
+      max-width: 900px;
+      margin: 40px auto;
+      background: rgba(255,255,255,0.1);
+      backdrop-filter: blur(6px);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+    }
+    h2 {
+      font-size: 26px;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    .day {
+      margin-bottom: 35px;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      padding-bottom: 20px;
+    }
+    .day h3 {
+      margin-bottom: 15px;
+      color: #facc15;
+      font-size: 22px;
+      text-shadow: 0 0 10px #000;
+    }
+    .match {
+      background: rgba(0,0,0,0.3);
+      border-radius: 10px;
+      padding: 15px;
+      margin: 10px 0;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+      transition: transform 0.3s;
+    }
+    .match:hover {
+      transform: translateY(-5px) scale(1.02);
+    }
+    .match h4 {
+      font-size: 18px;
+      margin: 0 0 10px;
+    }
+    .match p {
+      margin: 0;
+      font-size: 15px;
+      opacity: 0.9;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      color: #fff;
+      background: linear-gradient(90deg, #f59e0b, #ef4444);
+      transition: 0.3s;
+      text-decoration: none;
+    }
+    .btn:hover {
+      opacity: 0.85;
+      transform: scale(1.05);
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: rgba(255,255,255,0.8);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="cfl-logo.png" alt="CFL Logo">
+    <h1>Children Fantasy League</h1>
+  </header>
+
+  <section class="schedule">
+    <h2>🏏 CFL-6 MATCHES SCHEDULE 🏆</h2>
+
+    <!-- Day 1 -->
+    <div class="day">
+      <h3>Day-1 Friday</h3>
+      <div class="match">
+        <h4>Rising Stars 🆚 Haidari Legends</h4>
+        <p>🗓️ 17 October 2025 — 🕞 3:30 PM</p>
+        <a href="#" class="btn">VIEW SCORECARD</a>
+      </div>
+      <div class="match">
+        <h4>Sultan Tigers 🆚 Super Kings</h4>
+        <p>🗓️ 17 October 2025 — 🕞 4:30 PM</p>
+        <a href="#" class="btn">VIEW SCORECARD</a>
+      </div>
+    </div>
+
+    <!-- Day 2 -->
+    <div class="day">
+      <h3>Day-2 Saturday</h3>
+      <div class="match">
+        <h4>Balouch Raiders 🆚 Sultan Tigers</h4>
+        <p>🗓️ 18 October 2025 — 🕞 3:30 PM</p>
+        <a href="#" class="btn">VIEW SCORECARD</a>
+      </div>
+      <div class="match">
+        <h4>Super Kings 🆚 Haidari Legends</h4>
+        <p>🗓️ 18 October 2025 — 🕞 4:30 PM</p>
+        <a href="#" class="btn">VIEW SCORECARD</a>
+      </div>
+    </div>
+
+    <!-- Day 3 -->
+    <div class="day">
+      <h3>Day-3 Super Sunday</h3>
+      <div class="match">
+        <h4>Rising Stars 🆚 Super Kings</h4>
+        <p>🗓️ 19 October 2025 — 🕞 3:30 PM</p>
+        <a href="#" class="btn">VIEW SCORECARD</a>
+      </div>
+      <div class="match">
+        <h4>Haidari Legends 🆚 Balouch Raiders</h4>
+        <p>🗓️ 19 October 2025 — 🕞 4:30 PM</p>
+        <a href="#" class="btn">VIEW SCORECARD</a>
+      </div>
+    </div>
+
+    <!-- Day 4 -->
+    <div class="day">
+      <h3>Day-4 Monday</h3>
+      <div class="match">
+        <h4>Sultan Tigers 🆚 Rising Stars</h4>
+        <p>🗓️ 20 October 2025 — 🕞 3:30 PM</p>
+        <a href="#" class="btn">VIEW SCORECARD</a>
+      </div>
+      <div class="match">
+        <h4>Balouch Raiders 🆚 Super Kings</h4>
+        <p>🗓️ 20 October 2025 — 🕞 4:30 PM</p>
+        <a href="#" class="btn">VIEW SCORECARD</a>
+      </div>
+    </div>
+
+    <!-- Day 5 -->
+    <div class="day">
+      <h3>Day-5 Tuesday</h3>
+      <div class="match">
+        <h4>Sultan Tigers 🆚 Haidari Legends</h4>
+        <p>🗓️ 21 October 2025 — 🕞 3:30 PM</p>
+        <a href="#" class="btn">VIEW SCORECARD</a>
+      </div>
+      <div class="match">
+        <h4>Rising Stars 🆚 Balouch Raiders</h4>
+        <p>🗓️ 21 October 2025 — 🕞 4:30 PM</p>
+        <a href="#" class="btn">VIEW SCORECARD</a>
+      </div>
+    </div>
+
+    <!-- Playoffs -->
+    <div class="day">
+      <h3>Playoffs (Wednesday)</h3>
+      <div class="match">
+        <h4>1st Qualifier — TB1 🆚 TB2</h4>
+        <p>🗓️ 22 October 2025 — 🕞 3:30 PM</p>
+        <a href="#" class="btn">VIEW SCORECARD</a>
+      </div>
+      <div class="match">
+        <h4>Eliminator — TB3 🆚 TB4</h4>
+        <p>🗓️ 22 October 2025 — 🕞 4:30 PM</p>
+        <a href="#" class="btn">VIEW SCORECARD</a>
+      </div>
+    </div>
+
+    <!-- 2nd Qualifier -->
+    <div class="day">
+      <h3>2nd Qualifier (Thursday)</h3>
+      <div class="match">
+        <h4>Q1L 🆚 EW</h4>
+        <p>🗓️ 23 October 2025 — 🕞 4:00 PM</p>
+        <a href="#" class="btn">VIEW SCORECARD</a>
+      </div>
+    </div>
+
+    <!-- Final -->
+    <div class="day">
+      <h3>Final Friday</h3>
+      <div class="match">
+        <h4>Q1W 🆚 Q2W</h4>
+        <p>🗓️ 24 October 2025 — 🕞 4:30 PM</p>
+        <a href="#" class="btn">VIEW SCORECARD</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>© 2025 Children Fantasy League. All Rights Reserved.</footer>
+</body>
+          </html>
+          
