@@ -6,6 +6,89 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
+ <!-- SCORECARD OVERLAY (paste before </body>) -->
+<div id="scoreOverlay" class="score-overlay hidden" aria-hidden="true">
+  <div class="overlay-backdrop" id="overlayBackdrop"></div>
+
+  <div class="overlay-card" role="dialog" aria-modal="true">
+    <button id="overlayClose" class="overlay-close">✕</button>
+
+    <!-- Top live ticker (player batting example) -->
+    <div class="overlay-topbar">
+      <div id="liveBatsman" class="live-batsman">VIRAT KOHLI 85 (116)</div>
+    </div>
+
+    <!-- Main score panel -->
+    <div class="overlay-main">
+      <div class="team-block left">
+        <img id="teamALogo" src="images/t1.png" alt="Team A" />
+        <div class="team-name" id="teamAName">Rising Stars</div>
+      </div>
+
+      <div class="score-block">
+        <div class="score-large">
+          <div class="score-left">
+            <div id="scoreA" class="score-num">352</div>
+            <div class="score-label">/ <span id="wktA">7</span></div>
+            <div class="overs" id="ovA">50.0</div>
+          </div>
+          <div class="vs">VS</div>
+          <div class="score-right">
+            <div id="scoreB" class="score-num">337</div>
+            <div class="score-label">/ <span id="wktB">10</span></div>
+            <div class="overs" id="ovB">47.4</div>
+          </div>
+        </div>
+
+        <div class="result-line" id="resultLine">AUSTRALIA WON BY 14 RUNS</div>
+      </div>
+
+      <div class="team-block right">
+        <img id="teamBLogo" src="images/t4.png" alt="Team B" />
+        <div class="team-name" id="teamBName">Haidari Legends</div>
+      </div>
+    </div>
+
+    <!-- Details (batting, bowling small table) -->
+    <div class="overlay-details">
+      <div class="detail-col">
+        <h4>Top Scorers</h4>
+        <div id="topScorers">MAXWELL 77(71) • GREEN 50(40) • INGLIS 50(40)</div>
+      </div>
+      <div class="detail-col">
+        <h4>Bowling</h4>
+        <div id="bowlers">USAMA 2-31 • NAWAZ 1-34 • WASIM 1-63</div>
+      </div>
+    </div>
+
+    <!-- Controls for live editing (only visible to you, admin) -->
+    <div class="overlay-controls">
+      <div class="ctrl-row">
+        <label>Team A Runs <input id="inpRunsA" type="number" value="352"></label>
+        <label>Wkts <input id="inpWktsA" type="number" value="7"></label>
+        <label>Overs <input id="inpOvA" type="text" value="50.0"></label>
+      </div>
+      <div class="ctrl-row">
+        <label>Team B Runs <input id="inpRunsB" type="number" value="337"></label>
+        <label>Wkts <input id="inpWktsB" type="number" value="10"></label>
+        <label>Overs <input id="inpOvB" type="text" value="47.4"></label>
+      </div>
+      <div class="ctrl-row">
+        <label>Live Ticker <input id="inpTicker" type="text" value="VIRAT KOHLI 85 (116)"></label>
+        <label>Result <input id="inpResult" type="text" value="AUSTRALIA WON BY 14 RUNS"></label>
+      </div>
+
+      <div class="ctrl-actions">
+        <button id="btnApply" class="btn">Apply</button>
+        <button id="btnSaveLocal" class="btn">Save Local</button>
+        <button id="btnExport" class="btn">Export JSON</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- END OF OVERLAY -->
+ 
 <body>
   <header>
     <img src="images/cfl-logo.png" alt="CFL Logo" width="100">
