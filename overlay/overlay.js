@@ -1,13 +1,14 @@
 // overlay.js — CFL Live Score Overlay (TV Broadcast Style)
 
-// --- TEAMS DATA (logos in overlay/images/) ---
+// --- TEAMS DATA (logos in images/) ---
 const teamsData = {
-  t1: { id: 't1', name: 'Rising Stars', logo: 'overlay/images/t1.png' },
-  t2: { id: 't2', name: 'Balouch Raiders', logo: 'overlay/images/t2.png' },
-  t3: { id: 't3', name: 'Flying Eagles', logo: 'overlay/images/t3.png' },
-  t4: { id: 't4', name: 'Haidari Legends', logo: 'overlay/images/t4.png' },
-  t5: { id: 't5', name: 'Super Kings', logo: 'overlay/images/t5.png' },
-  t6: { id: 't6', name: 'Sultan Tigers', logo: 'overlay/images/t6.png' }
+const teamsData = {
+  t1: { id:'t1', name:'Rising Stars', logo:'../images/t1.png' },
+  t2: { id:'t2', name:'Balouch Raiders', logo:'../images/t2.png' },
+  t3: { id:'t3', name:'Flying Eagles', logo:'../images/t3.png' },
+  t4: { id:'t4', name:'Haidari Legends', logo:'../images/t4.png' },
+  t5: { id:'t5', name:'Super Kings', logo:'../images/t5.png' },
+  t6: { id:'t6', name:'Sultan Tigers', logo:'../images/t6.png' }
 };
 
 // --- UTILITIES ---
