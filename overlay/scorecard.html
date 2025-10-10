@@ -1,82 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Match Scorecard</title>
-  <link rel="stylesheet" href="overlay.css" />
+  <link rel="stylesheet" href="overlay.css">
+  <style>
+    body {
+      background: linear-gradient(180deg, #0b1420 0%, #101d33 100%);
+      color: #fff;
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    .overlay-container {
+      max-width: 1000px;
+      margin: 20px auto;
+      background: rgba(0,0,0,0.6);
+      border-radius: 12px;
+      padding: 20px 30px;
+      box-shadow: 0 0 15px rgba(255,255,255,0.1);
+    }
+    .overlay-header {
+      text-align: center;
+      background: linear-gradient(90deg, #082d47, #1b4d7a);
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 1.4rem;
+      font-weight: bold;
+      text-shadow: 0 0 10px #00e0ff;
+    }
+    .teams-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 20px 0;
+    }
+    .team {
+      text-align: center;
+      flex: 1;
+    }
+    .team img {
+      width: 90px;
+      height: 90px;
+      object-fit: contain;
+      border-radius: 50%;
+      background: #fff;
+      padding: 5px;
+      box-shadow: 0 0 10px #00e0ff;
+    }
+    .team h3 {
+      margin-top: 8px;
+      font-weight: bold;
+      text-shadow: 0 0 8px #00e0ff;
+    }
+    .vs {
+      font-size: 3rem;
+      color: #00e0ff;
+      font-weight: bold;
+    }
+    .toss-line {
+      text-align: center;
+      margin: 15px 0;
+      font-style: italic;
+      color: #ffd700;
+    }
+
+    .inning-title {
+      margin-top: 25px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      text-shadow: 0 0 10px #00e0ff;
+    }
+    .batting, .bowling {
+      margin-top: 10px;
+    }
+    .section-heading {
+      font-weight: bold;
+      color: #00e0ff;
+      text-shadow: 0 0 6px #00e0ff;
+      margin-bottom: 5px;
+    }
+    .score-line {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+      padding: 6px 4px;
+    }
+    .score-line span {
+      font-size: 0.95rem;
+    }
+    .player-name {
+      font-weight: bold;
+    }
+    .player-score {
+      font-weight: bold;
+      color: #ffd700;
+    }
+    .bowling .score-line span {
+      font-size: 0.9rem;
+    }
+    .match-result {
+      text-align: center;
+      margin-top: 30px;
+      background: linear-gradient(90deg, #002b3d, #013a52);
+      padding: 12px;
+      border-radius: 10px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      text-shadow: 0 0 10px #ffd700;
+    }
+  </style>
 </head>
 <body>
 
   <div class="overlay-container">
-
+    
+    <!-- League Header -->
     <div class="overlay-header">
-      <h2>CFL-6 Children Fantasy League 2025</h2>
+      CFL-6 Children Fantasy League 2025
     </div>
 
+    <!-- Teams -->
     <div class="teams-section">
       <div class="team">
         <img src="../images/t1.png" alt="Rising Stars">
         <h3>RISING STARS</h3>
       </div>
-
-      <div class="vs-box">
-        <span>VS</span>
-      </div>
-
+      <div class="vs">V</div>
       <div class="team">
         <img src="../images/t4.png" alt="Haideri Legends">
         <h3>HAIDARI LEGENDS</h3>
       </div>
     </div>
 
-    <div class="score-section">
-      <div class="team-score">
-        <h1 class="score">352-7</h1>
-        <table>
-          <tr><td>MAXWELL</td><td>77 (71)</td></tr>
-          <tr><td>GREEN</td><td>50 (40)</td></tr>
-          <tr><td>INGLIS</td><td>50 (40)</td></tr>
-          <tr><td>WARNER</td><td>50 (40)</td></tr>
-        </table>
-      </div>
-
-      <div class="team-score">
-        <h1 class="score">337</h1>
-        <table>
-          <tr><td>BABAR</td><td>90 (40)</td></tr>
-          <tr><td>IFTIKHAR</td><td>83 (40)</td></tr>
-          <tr><td>NAWAZ</td><td>53 (40)</td></tr>
-          <tr><td>FAKHAR</td><td>24 (40)</td></tr>
-        </table>
-      </div>
+    <!-- Toss -->
+    <div class="toss-line">
+      Rising Stars won the toss and chose to bat first.
     </div>
 
-    <div class="overs-section">
-      <div class="overs">
-        <h3>50 OVERS</h3>
-        <table>
-          <tr><td>USAMA</td><td>2-31 (5)</td></tr>
-          <tr><td>NAWAZ</td><td>1-34 (6)</td></tr>
-          <tr><td>WASIM</td><td>1-63 (8)</td></tr>
-        </table>
-      </div>
-
-      <div class="overs">
-        <h3>47.4 OVERS</h3>
-        <table>
-          <tr><td>CUMMINS</td><td>2-34 (6)</td></tr>
-          <tr><td>ZAMPA</td><td>2-34 (6)</td></tr>
-          <tr><td>ABBOTT</td><td>2-34 (6)</td></tr>
-        </table>
-      </div>
+    <!-- 1st Inning -->
+    <div class="inning-title">1st INNING</div>
+    
+    <!-- Batting -->
+    <div class="batting">
+      <div class="section-heading">Batting - 100/5</div>
+      <div class="score-line"><span class="player-name">A. Khan</span><span>drives through covers</span><span class="player-score">52 (36)</span></div>
+      <div class="score-line"><span class="player-name">M. Ali</span><span>caught behind</span><span class="player-score">28 (22)</span></div>
+      <div class="score-line"><span class="player-name">R. Haider</span><span>lbw by Zampa</span><span class="player-score">10 (18)</span></div>
+      <div class="score-line"><span class="player-name">J. Abbas</span><span>pulls to mid-wicket</span><span class="player-score">33 (25)</span></div>
+      <div class="score-line"><span class="player-name">U. Shafiq</span><span>run out</span><span class="player-score">5 (10)</span></div>
+      <div class="score-line"><span class="player-name">Extras</span><span></span><span class="player-score">10</span></div>
     </div>
 
+    <!-- Bowling -->
+    <div class="bowling">
+      <div class="section-heading">Bowling (6.3 overs)</div>
+      <div class="score-line"><span class="player-name">R. Zampa</span><span>3</span><span>5</span><span>2</span><span>22</span></div>
+      <div class="score-line"><span class="player-name">A. Starc</span><span>2</span><span>4</span><span>1</span><span>19</span></div>
+      <div class="score-line"><span class="player-name">C. Green</span><span>1.3</span><span>3</span><span>1</span><span>15</span></div>
+      <div class="score-line"><span class="player-name">H. Cummins</span><span>3</span><span>2</span><span>0</span><span>25</span></div>
+      <div class="score-line"><span class="player-name">A. Agar</span><span>2</span><span>4</span><span>1</span><span>20</span></div>
+    </div>
+
+    <div class="inning-title">2nd INNING</div>
+
+    <!-- Batting -->
+    <div class="batting">
+      <div class="section-heading">Batting - 99/4</div>
+      <div class="score-line"><span class="player-name">B. Khan</span><span>pulls to leg</span><span class="player-score">40 (28)</span></div>
+      <div class="score-line"><span class="player-name">H. Nawaz</span><span>caught mid-off</span><span class="player-score">22 (30)</span></div>
+      <div class="score-line"><span class="player-name">K. Malik</span><span>clean bowled</span><span class="player-score">18 (20)</span></div>
+      <div class="score-line"><span class="player-name">A. Rafiq</span><span>drives to point</span><span class="player-score">10 (14)</span></div>
+      <div class="score-line"><span class="player-name">Extras</span><span></span><span class="player-score">9</span></div>
+    </div>
+
+    <!-- Bowling -->
+    <div class="bowling">
+      <div class="section-heading">Bowling (5.2 overs)</div>
+      <div class="score-line"><span class="player-name">H. Zubair</span><span>3</span><span>4</span><span>2</span><span>21</span></div>
+      <div class="score-line"><span class="player-name">A. Khan</span><span>2</span><span>3</span><span>1</span><span>18</span></div>
+      <div class="score-line"><span class="player-name">R. Malik</span><span>2</span><span>2</span><span>0</span><span>15</span></div>
+      <div class="score-line"><span class="player-name">S. Asif</span><span>1</span><span>4</span><span>0</span><span>12</span></div>
+      <div class="score-line"><span class="player-name">F. Ahmed</span><span>2</span><span>2</span><span>1</span><span>20</span></div>
+    </div>
+
+    <!-- Result -->
     <div class="match-result">
-      <h2>AUSTRALIA WON BY 14 RUNS</h2>
+      Rising Stars won by 5 runs
     </div>
+
   </div>
 
-  <script src="overlay.js"></script>
+<script src="overlay.js"></script>
 </body>
 </html>
